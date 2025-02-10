@@ -1,0 +1,434 @@
+/* ===================== */
+/*  ALGEMENE STYLING    */
+/* ===================== */
+:root {
+    --font-family: 'Courier New', Courier, monospace;
+    --primary-color: rgb(17, 53, 213);
+    --secundairy-color: rgb(82, 80, 80);
+    --link-color-hover: rgb(221, 104, 211);
+    --block-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--secundairy-color);
+    padding: 1em;
+}
+
+/* ===================== */
+/*  NAVIGATIE STYLING   */
+/* ===================== */
+.index-nav ul {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}
+
+.index-nav ul a, .home {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--block-color);
+}
+
+.index-nav a:hover {
+    color: var(--link-color-hover);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===================== */
+/*  ALGEMENE LINKS      */
+/* ===================== */
+a {
+    color: var(--secundairy-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-color-hover);
+}
+
+/* ===================== */
+/*  WELKOM SECTIE       */
+/* ===================== */
+#welkom {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: var(--block-color);
+    margin-bottom: 2em;
+}
+
+#lachend {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+}
+
+.welkomtekst {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ===================== */
+/*  OVER MIJ & PROJECTEN */
+/* ===================== */
+#overmij, #projecten, .mijnwerk {
+    background-color: var(--block-color);
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+/* ===================== */
+/*  PROJECT STYLING     */
+/* ===================== */
+.project-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-bottom: 1em;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project {
+    flex: 0 0 300px;
+    height: auto;
+    background-color: var(--block-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    scroll-snap-align: center;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.project img {
+    width: 100%;
+    height: 250px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.project p {
+    font-size: 1rem;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    color: var(--secundairy-color);
+}
+
+/* ===================== */
+/*  PROJECT SCROLLBAR   */
+/* ===================== */
+.project-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-container::-webkit-scrollbar-thumb {
+    background: var(--secundairy-color);
+    border-radius: 4px;
+}
+
+.project-container::-webkit-scrollbar-track {
+    background: var(--block-color);
+}
+
+/* ===================== */
+/*  PROJECT PAGINA'S     */
+/* ===================== */
+.home{
+    display: flex;
+    justify-content:center;
+}
+
+.mijnwerk {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+.inhoud {
+    margin-bottom: 20px;
+}
+
+
+.navigation-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mijnwerk {
+    text-align: center; /* Centreert ook de tekst */
+}
+
+.mijnwerk img {
+    height: auto; /* Houdt de beeldverhouding intact */
+    width: 80%; /* Zorgt ervoor dat de afbeelding zich aanpast aan het scherm */
+    max-width: 500px; /* Beperkt de maximale breedte */
+    margin: 20px 0; /* Geeft wat ruimte boven en onder de afbeelding */
+}
+
+
+.petschermen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.snow {
+    display: flex;
+}
+
+.snow img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10px; /* Optioneel: voegt ruimte tussen de afbeeldingen toe */
+}
+
+/* ===================== */
+/*  CONTACT             */
+/* ===================== */
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--block-color);
+    margin-bottom: 2em;
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+    padding-left: 2em;
+}
+
+#mezelf {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===================== */
+/*  SOCIAL         */
+/* ===================== */
+.social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social i:hover {
+    color: var(--link-color-hover);
+}
+
+/* ===================== */
+/*  SKILLS              */
+/* ===================== */
+#skills {
+    background-color: var(--block-color);
+    justify-items: center;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+}
+
+#skills h2 {
+    padding: 1em;
+}
+
+#skills img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+i {
+    font-size: 3rem;
+    color: black;
+}
+
+#skills img, i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Dit zorgt voor een vloeiende overgang */
+    margin: 10px; /* Optioneel: voegt ruimte toe tussen de iconen */
+}
+
+#skills img:hover, i:hover {
+    transform: scale(1.2); /* Verhoogt de grootte van de afbeelding of het icoon */
+}
+
+#iconen{
+    justify-self: center;
+}
+
+#iconen, #iconen a{
+    color: white;
+}
+
+#iconen {
+    text-align: center; /* Zorgt ervoor dat alles mooi gecentreerd is */
+    margin-top: 20px; /* Extra ruimte boven het hele blok */
+}
+
+/* ===================== */
+/*  BRONVERMELDING       */
+/* ===================== */
+
+#toggleButton {
+    background: var(--secundairy-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: block; /* Zorgt ervoor dat de knop los staat */
+    margin: 0 auto 10px auto; /* Centreert de knop en voegt ruimte toe eronder */
+}
+
+#toggleButton:hover {
+    background: var(--link-color-hover);
+    transform: scale(1.05); /* Maakt de knop iets groter bij hover */
+}
+
+#iconenContent {
+    background: rgba(0, 0, 0, 0.05); /* Zachte achtergrond voor betere zichtbaarheid */
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto; /* Centreert de tekst */
+    text-align: left; /* Houdt de tekst goed leesbaar */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px); /* Zorgt voor een vloeiende overgang */
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================== */
+/*  FOOTER               */
+/* ===================== */
+
+.copyright{
+    justify-self: center;
+}
+
+footer {
+color: white;
+}
+
+
+/* ===================== */
+/*  RESPONSIVE DESIGN   */
+/* ===================== */
+@media (max-width: 768px) {
+    .index-nav ul {
+        gap: 0.5em;
+    }
+
+    .index-nav a {
+        font-size: 13px;
+    }
+
+    #welkom, .mijnwerk, #contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .links, .rechts {
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .pijlrechts, .pijllinks {
+        position: relative;
+        display: inline-block;
+        bottom: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .navigation-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #mezelf {
+        max-width: 80%;
+        margin-top: 1em;
+    }
+
+    .social {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    i {
+        font-size: 2rem;
+    }
+
+    #skills img {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .snow {
+        flex-direction: column; /* Stapelt de afbeeldingen onder elkaar */
+        text-align: center; /* Centreert de inhoud */
+    }
+
+    .snow img {
+        width: 80%; /* Laat de afbeeldingen iets kleiner worden op mobiele schermen */
+        max-width: 300px; /* Beperkt de grootte op kleinere schermen */
+        margin: 0 auto; /* Centreert de afbeeldingen */
+    }
+
+}
+
+
+
